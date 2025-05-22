@@ -1,0 +1,6 @@
+adafruit-circuitpython-tsl2591
+adafruit-blinka
+adafruit-circuitpython-ads1x15
+requests
+bme680
+numpy>=1.20

@@ -1,0 +1,14 @@
+[Unit]
+Description=Servicio de lectura de sensores de la bici
+After=network.target
+
+[Service]
+WorkingDirectory=/home/pi/bike_sensores
+ExecStart=/bin/bash /home/pi/bike_sensores/setup.sh
+Restart=always
+User=pi
+StandardOutput=append:/home/pi/bike_sensores/logs/output.log
+StandardError=append:/home/pi/bike_sensores/logs/error.log
+
+[Install]
+WantedBy=multi-user.target

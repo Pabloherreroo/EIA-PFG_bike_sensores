@@ -1,0 +1,9 @@
+WARNING: Error parsing dependencies of send2trash: Expected matching RIGHT_PARENTHESIS for LEFT_PARENTHESIS, after version specifier
+    sys-platform (=="darwin") ; extra == 'objc'
+                 ~^
+WARNING: Error parsing dependencies of send2trash: Expected matching RIGHT_PARENTHESIS for LEFT_PARENTHESIS, after version specifier
+    sys-platform (=="darwin") ; extra == 'objc'
+                 ~^
+WARNING: Error parsing dependencies of send2trash: Expected matching RIGHT_PARENTHESIS for LEFT_PARENTHESIS, after version specifier
+    sys-platform (=="darwin") ; extra == 'objc'
+                 ~^
