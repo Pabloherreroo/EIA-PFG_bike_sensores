@@ -1,5 +1,14 @@
 # EIA-PFG_bike_sensores
 
-Se divide en dos secciones:
-  · Montaje, que incluye los archivos de piezas creados en Fusion y los modelos utilizados para imprimir dichas piezas.
-  · Raspberry, que muestra tanto el proyecto que recoge y envía datos de los sensores como su servicio para el inicio automático.
+Proyecto para construir un sistema de recogida de datos sensoriales en una bicicleta eléctrica.
+
+El repositorio se divide en dos secciones principales:
+
+- **Montaje**  
+  - Archivos de piezas diseñadas en Fusion 360.
+  - Modelos utilizados para la impresión 3D de dichas piezas.
+
+- **Raspberry**  
+  - Proyecto que recoge y envía datos de los sensores.
+  - Servicio para el inicio automático del sistema al arrancar la Raspberry Pi.
+
