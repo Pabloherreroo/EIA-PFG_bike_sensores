@@ -55,25 +55,28 @@ def send_data():
             hilo_imu.join()
 
             lat, lon = resultados["gps"]
-
-            data = {
-                "bike_id": "B1",
-                "latitud": lat,
-                "longitud": lon,
-                "puntuacion_road": resultados["puntuacion_road"],
-                "ruido": resultados["ruido"],
-                "temperatura": resultados["ambiental"].get("temperatura", 0),
-                "humedad": resultados["ambiental"].get("humedad", 0),
-                "presion": resultados["ambiental"].get("presion", 0),
-                "luz": resultados["luz"],
-                "fecha": datetime.datetime.now().isoformat()
-            }
             
-            response = requests.post(FIREBASE_URL, json=data)
-            if response.status_code == 200:
-                print("Datos enviados correctamente:", data)
+            if lat != 0.0 or lon != 0.0:
+                data = {
+                    "bike_id": "B1",
+                    "latitud": lat,
+                    "longitud": lon,
+                    "puntuacion_road": resultados["puntuacion_road"],
+                    "ruido": resultados["ruido"],
+                    "temperatura": resultados["ambiental"].get("temperatura", 0),
+                    "humedad": resultados["ambiental"].get("humedad", 0),
+                    "presion": resultados["ambiental"].get("presion", 0),
+                    "luz": resultados["luz"],
+                    "fecha": datetime.datetime.now().isoformat()
+                }
+
+                response = requests.post(FIREBASE_URL, json=data)
+                if response.status_code == 200:
+                    print("Datos enviados correctamente:", data)
+                else:
+                    print("Error al enviar datos:", response.text)
             else:
-                print("Error al enviar datos:", response.text)
+                print("Coordenadas GPS no válidas (0,0), no se envían datos.")
 
         except Exception as e:
             print("Error general:", str(e))
@@ -85,5 +88,12 @@ def send_data():
             time.sleep(time_to_wait)
 
 if __name__ == "__main__":
-    send_data()
+    try:
+        send_data()
+    except KeyboardInterrupt:
+        print("\nDeteniendo")
+    finally:
+        from memoria_compartida.leerIMU_GPS import map_file
+        print("Cerrando mapeo de memoria compartida")
+        map_file.close()
 

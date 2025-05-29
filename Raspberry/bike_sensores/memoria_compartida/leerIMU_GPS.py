@@ -1,51 +1,47 @@
-import time
-import threading
-import numpy as np
-import struct
-from multiprocessing import shared_memory
+#!/usr/bin/env python3
 
-SHM_NAME = "shared_data"  # YA LO CAMBIARÉ
+import time
+import struct
+import posix_ipc
+import mmap
+import numpy as np
+
+SHM_NAME = "/eBici_shared_memory"
 SHM_SIZE = 52  # (49 bytes reales)
 
-imu_data_buffer = []
+print(f"Esperando a que el writer cree la memoria compartida '{SHM_NAME}'...")
+while True:
+    try:
+        shm = posix_ipc.SharedMemory(SHM_NAME)
+        break
+    except posix_ipc.ExistentialError:
+        time.sleep(0.01)
+
+map_file = mmap.mmap(shm.fd, SHM_SIZE, mmap.MAP_SHARED, mmap.PROT_READ)
+shm.close_fd()
+print(f"Memoria compartida '{SHM_NAME}' abierta y mapeada ({SHM_SIZE} bytes)")
 
 def read_shared_memory():
-    try:
-        existing_shm = shared_memory.SharedMemory(name=SHM_NAME)
-        buffer = existing_shm.buf[:SHM_SIZE]
-        return buffer
-    except FileNotFoundError:
-        print("No se encontró la memoria compartida")
-        return None
-    except Exception as e:
-        print("Error leyendo memoria compartida:", e)
-        return None
+    map_file.seek(0)
+    return map_file.read(SHM_SIZE)
 
 def parse_data(buffer):
-    if buffer is None:
-        return (0.0, 0.0), (0.0, 0.0, 0.0)
-    
     try:
-        # Memoria compartida: 5 floats (Latitud, Longitud...) + 5 bytes + 6 floats (Yaw, Pitch, Roll, Accel_X, Accel_Y, Accel_Z)
-        lat = struct.unpack('f', buffer[0:4])[0]
-        lon = struct.unpack('f', buffer[4:8])[0]
-        gps_data = (lat, lon)
-        
-        offset = 20 + 5 + 12  # 5f + 5b + 3f (No cojo Yaw, Pitch, Roll)
-        accel_x = struct.unpack('f', buffer[offset:offset+4])[0]
-        accel_y = struct.unpack('f', buffer[offset+4:offset+8])[0]
-        accel_z = struct.unpack('f', buffer[offset+8:offset+12])[0]    
-        imu_data = (accel_x, accel_y, accel_z)
-        
-        return gps_data, imu_data
+        # GPS: primeros 2 floats
+        lat, lon = struct.unpack_from('ff', buffer, 0)
+        # IMU: ultimos 3 floats
+        offset = 20 + 5 + 3 + 12  # 5floats + 5bytes + padding + 3floats
+        ax, ay, az = struct.unpack_from('fff', buffer, offset)
+        return (lat, lon), (ax, ay, az)
     except Exception as e:
-        print(f"Error al extraer datos de la memoria compartida: {e}")
-        return (0.0, 0.0), (0.0, 0.0, 0.0)
+        print(f"Error parseando datos: {e}")
+        return (0.0,0.0), (0.0,0.0,0.0)
 
 def get_gps():
     time.sleep(0.8)
     buffer = read_shared_memory()
     gps_data, _ = parse_data(buffer)
+    print(f"GPS: {gps_data}")
     return gps_data
 
 def get_imu():
@@ -68,6 +64,7 @@ def get_imu():
     accel_data = np.array(imu_data_buffer)
     magnitudes = np.sqrt(np.sum(accel_data**2, axis=1))     # sqrt(x² + y² + z²)
     std_dev = np.std(magnitudes) # A mayor sea habrá más vibraciones
+    print(f"Desv tipica: {std_dev}")
 
     if std_dev < 0.5:
         return 1
@@ -79,5 +76,8 @@ def get_imu():
         return 4
 
 if __name__ == "__main__":
-    print("GPS:", get_gps())
-    print("Calidad carretera:", get_imu())
+    try:
+        print("GPS:", get_gps())
+        print("Calidad carretera:", get_imu())
+    finally:
+        map_file.close()

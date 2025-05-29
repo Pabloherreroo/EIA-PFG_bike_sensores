@@ -1,127 +1,25 @@
-El entorno virtual ya existe. Activando entorno virtual...
-Instalando dependencias...
-Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
-Requirement already satisfied: pip in ./.venv/lib/python3.11/site-packages (23.0.1)
-Collecting pip
-  Using cached pip-25.1.1-py3-none-any.whl (1.8 MB)
-Installing collected packages: pip
-  Attempting uninstall: pip
-    Found existing installation: pip 23.0.1
-    Uninstalling pip-23.0.1:
-      Successfully uninstalled pip-23.0.1
-Successfully installed pip-25.1.1
-Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
-Requirement already satisfied: adafruit-circuitpython-tsl2591 in ./.venv/lib/python3.11/site-packages (from -r requirements.txt (line 1)) (1.4.2)
-Requirement already satisfied: adafruit-blinka in ./.venv/lib/python3.11/site-packages (from -r requirements.txt (line 2)) (8.57.0)
-Requirement already satisfied: requests in /usr/lib/python3/dist-packages (from -r requirements.txt (line 3)) (2.28.1)
-Requirement already satisfied: bme680 in ./.venv/lib/python3.11/site-packages (from -r requirements.txt (line 4)) (2.0.0)
-Requirement already satisfied: adafruit-circuitpython-busdevice in ./.venv/lib/python3.11/site-packages (from adafruit-circuitpython-tsl2591->-r requirements.txt (line 1)) (5.2.11)
-Requirement already satisfied: Adafruit-PlatformDetect>=3.70.1 in ./.venv/lib/python3.11/site-packages (from adafruit-blinka->-r requirements.txt (line 2)) (3.78.0)
-Requirement already satisfied: Adafruit-PureIO>=1.1.7 in ./.venv/lib/python3.11/site-packages (from adafruit-blinka->-r requirements.txt (line 2)) (1.1.11)
-Requirement already satisfied: binho-host-adapter>=0.1.6 in ./.venv/lib/python3.11/site-packages (from adafruit-blinka->-r requirements.txt (line 2)) (0.1.6)
-Requirement already satisfied: pyftdi>=0.40.0 in ./.venv/lib/python3.11/site-packages (from adafruit-blinka->-r requirements.txt (line 2)) (0.56.0)
-Requirement already satisfied: adafruit-circuitpython-typing in ./.venv/lib/python3.11/site-packages (from adafruit-blinka->-r requirements.txt (line 2)) (1.11.2)
-Requirement already satisfied: sysv_ipc>=1.1.0 in ./.venv/lib/python3.11/site-packages (from adafruit-blinka->-r requirements.txt (line 2)) (1.1.0)
-Requirement already satisfied: smbus2 in /usr/lib/python3/dist-packages (from bme680->-r requirements.txt (line 4)) (0.4.2)
-Requirement already satisfied: pyserial in /usr/lib/python3/dist-packages (from binho-host-adapter>=0.1.6->adafruit-blinka->-r requirements.txt (line 2)) (3.5)
-Requirement already satisfied: pyusb!=1.2.0,>=1.0.0 in ./.venv/lib/python3.11/site-packages (from pyftdi>=0.40.0->adafruit-blinka->-r requirements.txt (line 2)) (1.3.1)
-Requirement already satisfied: adafruit-circuitpython-requests in ./.venv/lib/python3.11/site-packages (from adafruit-circuitpython-typing->adafruit-blinka->-r requirements.txt (line 2)) (4.1.10)
-Requirement already satisfied: typing_extensions~=4.0 in /usr/lib/python3/dist-packages (from adafruit-circuitpython-typing->adafruit-blinka->-r requirements.txt (line 2)) (4.4.0)
-Requirement already satisfied: Adafruit-Circuitpython-ConnectionManager in ./.venv/lib/python3.11/site-packages (from adafruit-circuitpython-requests->adafruit-circuitpython-typing->adafruit-blinka->-r requirements.txt (line 2)) (3.1.3)
-Ejecutando el script de envío de datos...
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:17.092485'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:18.202557'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:19.187073'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:20.187493'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:21.187155'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:22.179832'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:24.666508'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:25.667252'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:26.668905'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:27.666713'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:28.674117'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:29.667410'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:30.667037'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:31.668946'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:32.677798'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:33.677746'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:34.688126'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:35.673809'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:36.678122'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:37.694362'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:38.704016'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:39.694669'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:40.695030'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:41.697549'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.3, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:42.686150'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:43.686800'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:44.694940'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:45.705607'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:46.687936'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:47.688609'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:48.705561'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:49.698846'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:50.708138'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:51.689720'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:52.698420'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:55.669149'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:58.211059'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:15:59.221891'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:00.220914'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:01.231211'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:02.213670'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:03.222841'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:04.222671'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:05.338596'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:06.278379'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:07.266818'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:08.383077'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:09.273401'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:10.278366'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:11.269211'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:12.269385'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:13.268135'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:14.395958'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:15.289152'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:17.961370'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:18.962209'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:19.960742'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:20.961304'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:21.970422'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:22.970275'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:23.961456'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:24.962654'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:25.961878'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:26.961767'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:27.964625'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:28.962426'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:29.962790'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:30.972097'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:31.971986'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:33.932683'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:34.846739'}
-Datos enviados correctamente: {'bike_id': 'B1', 'latitud': 43.25, 'longitud': -2.94, 'puntuacion_road': 1, 'ruido': 50, 'temperatura': 21.4, 'humedad': 58, 'presion': 1011, 'luz': None, 'fecha': '2025-05-09T13:16:35.856547'}
-Datos enviados correctamente: El entorno virtual ya existe. Activando entorno virtual...
-Instalando dependencias...
+Actualizando pip...
 Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
 Requirement already satisfied: pip in ./.venv/lib/python3.11/site-packages (25.1.1)
+Instalando dependencias...
 Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
-Requirement already satisfied: adafruit-circuitpython-tsl2591 in ./.venv/lib/python3.11/site-packages (from -r requirements.txt (line 1)) (1.4.2)
-Requirement already satisfied: adafruit-blinka in ./.venv/lib/python3.11/site-packages (from -r requirements.txt (line 2)) (8.57.0)
-Requirement already satisfied: adafruit-circuitpython-ads1x15 in ./.venv/lib/python3.11/site-packages (from -r requirements.txt (line 3)) (2.4.3)
-Requirement already satisfied: requests in /usr/lib/python3/dist-packages (from -r requirements.txt (line 4)) (2.28.1)
-Requirement already satisfied: bme680 in ./.venv/lib/python3.11/site-packages (from -r requirements.txt (line 5)) (2.0.0)
-Requirement already satisfied: adafruit-circuitpython-busdevice in ./.venv/lib/python3.11/site-packages (from adafruit-circuitpython-tsl2591->-r requirements.txt (line 1)) (5.2.11)
-Requirement already satisfied: Adafruit-PlatformDetect>=3.70.1 in ./.venv/lib/python3.11/site-packages (from adafruit-blinka->-r requirements.txt (line 2)) (3.78.0)
-Requirement already satisfied: Adafruit-PureIO>=1.1.7 in ./.venv/lib/python3.11/site-packages (from adafruit-blinka->-r requirements.txt (line 2)) (1.1.11)
-Requirement already satisfied: binho-host-adapter>=0.1.6 in ./.venv/lib/python3.11/site-packages (from adafruit-blinka->-r requirements.txt (line 2)) (0.1.6)
-Requirement already satisfied: pyftdi>=0.40.0 in ./.venv/lib/python3.11/site-packages (from adafruit-blinka->-r requirements.txt (line 2)) (0.56.0)
-Requirement already satisfied: adafruit-circuitpython-typing in ./.venv/lib/python3.11/site-packages (from adafruit-blinka->-r requirements.txt (line 2)) (1.11.2)
-Requirement already satisfied: sysv_ipc>=1.1.0 in ./.venv/lib/python3.11/site-packages (from adafruit-blinka->-r requirements.txt (line 2)) (1.1.0)
-Requirement already satisfied: typing-extensions~=4.0 in /usr/lib/python3/dist-packages (from adafruit-circuitpython-ads1x15->-r requirements.txt (line 3)) (4.4.0)
-Requirement already satisfied: smbus2 in /usr/lib/python3/dist-packages (from bme680->-r requirements.txt (line 5)) (0.4.2)
-Requirement already satisfied: pyserial in /usr/lib/python3/dist-packages (from binho-host-adapter>=0.1.6->adafruit-blinka->-r requirements.txt (line 2)) (3.5)
-Requirement already satisfied: pyusb!=1.2.0,>=1.0.0 in ./.venv/lib/python3.11/site-packages (from pyftdi>=0.40.0->adafruit-blinka->-r requirements.txt (line 2)) (1.3.1)
-Requirement already satisfied: adafruit-circuitpython-requests in ./.venv/lib/python3.11/site-packages (from adafruit-circuitpython-typing->adafruit-blinka->-r requirements.txt (line 2)) (4.1.10)
-Requirement already satisfied: Adafruit-Circuitpython-ConnectionManager in ./.venv/lib/python3.11/site-packages (from adafruit-circuitpython-requests->adafruit-circuitpython-typing->adafruit-blinka->-r requirements.txt (line 2)) (3.1.3)
+Requirement already satisfied: adafruit-circuitpython-tsl2591 in ./.venv/lib/python3.11/site-packages (from -r /home/pi/bike_sensores/requirements.txt (line 1)) (1.4.2)
+Requirement already satisfied: adafruit-blinka in ./.venv/lib/python3.11/site-packages (from -r /home/pi/bike_sensores/requirements.txt (line 2)) (8.57.0)
+Requirement already satisfied: adafruit-circuitpython-ads1x15 in ./.venv/lib/python3.11/site-packages (from -r /home/pi/bike_sensores/requirements.txt (line 3)) (2.4.3)
+Requirement already satisfied: requests in /usr/lib/python3/dist-packages (from -r /home/pi/bike_sensores/requirements.txt (line 4)) (2.28.1)
+Requirement already satisfied: bme680 in ./.venv/lib/python3.11/site-packages (from -r /home/pi/bike_sensores/requirements.txt (line 5)) (2.0.0)
+Requirement already satisfied: numpy>=1.20 in /usr/lib/python3/dist-packages (from -r /home/pi/bike_sensores/requirements.txt (line 6)) (1.24.2)
+Requirement already satisfied: adafruit-circuitpython-busdevice in ./.venv/lib/python3.11/site-packages (from adafruit-circuitpython-tsl2591->-r /home/pi/bike_sensores/requirements.txt (line 1)) (5.2.11)
+Requirement already satisfied: Adafruit-PlatformDetect>=3.70.1 in ./.venv/lib/python3.11/site-packages (from adafruit-blinka->-r /home/pi/bike_sensores/requirements.txt (line 2)) (3.78.0)
+Requirement already satisfied: Adafruit-PureIO>=1.1.7 in ./.venv/lib/python3.11/site-packages (from adafruit-blinka->-r /home/pi/bike_sensores/requirements.txt (line 2)) (1.1.11)
+Requirement already satisfied: binho-host-adapter>=0.1.6 in ./.venv/lib/python3.11/site-packages (from adafruit-blinka->-r /home/pi/bike_sensores/requirements.txt (line 2)) (0.1.6)
+Requirement already satisfied: pyftdi>=0.40.0 in ./.venv/lib/python3.11/site-packages (from adafruit-blinka->-r /home/pi/bike_sensores/requirements.txt (line 2)) (0.56.0)
+Requirement already satisfied: adafruit-circuitpython-typing in ./.venv/lib/python3.11/site-packages (from adafruit-blinka->-r /home/pi/bike_sensores/requirements.txt (line 2)) (1.11.2)
+Requirement already satisfied: sysv_ipc>=1.1.0 in ./.venv/lib/python3.11/site-packages (from adafruit-blinka->-r /home/pi/bike_sensores/requirements.txt (line 2)) (1.1.0)
+Requirement already satisfied: typing-extensions~=4.0 in /usr/lib/python3/dist-packages (from adafruit-circuitpython-ads1x15->-r /home/pi/bike_sensores/requirements.txt (line 3)) (4.4.0)
+Requirement already satisfied: smbus2 in /usr/lib/python3/dist-packages (from bme680->-r /home/pi/bike_sensores/requirements.txt (line 5)) (0.4.2)
+Requirement already satisfied: pyserial in /usr/lib/python3/dist-packages (from binho-host-adapter>=0.1.6->adafruit-blinka->-r /home/pi/bike_sensores/requirements.txt (line 2)) (3.5)
+Requirement already satisfied: pyusb!=1.2.0,>=1.0.0 in ./.venv/lib/python3.11/site-packages (from pyftdi>=0.40.0->adafruit-blinka->-r /home/pi/bike_sensores/requirements.txt (line 2)) (1.3.1)
+Requirement already satisfied: adafruit-circuitpython-requests in ./.venv/lib/python3.11/site-packages (from adafruit-circuitpython-typing->adafruit-blinka->-r /home/pi/bike_sensores/requirements.txt (line 2)) (4.1.10)
+Requirement already satisfied: Adafruit-Circuitpython-ConnectionManager in ./.venv/lib/python3.11/site-packages (from adafruit-circuitpython-requests->adafruit-circuitpython-typing->adafruit-blinka->-r /home/pi/bike_sensores/requirements.txt (line 2)) (3.1.3)
 Ejecutando el script de envío de datos...

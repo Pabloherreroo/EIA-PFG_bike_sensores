@@ -4,9 +4,15 @@ After=network.target
 
 [Service]
 WorkingDirectory=/home/pi/bike_sensores
-ExecStart=/bin/bash /home/pi/bike_sensores/setup.sh
-Restart=always
 User=pi
+
+ExecStartPre=/bin/sh -c 'truncate -s 0 /home/pi/bike_sensores/logs/output.log || true'
+ExecStartPre=/bin/sh -c 'truncate -s 0 /home/pi/bike_sensores/logs/error.log || true'
+
+ExecStart=/bin/bash /home/pi/bike_sensores/setup.sh 
+
+Restart=always
+
 StandardOutput=append:/home/pi/bike_sensores/logs/output.log
 StandardError=append:/home/pi/bike_sensores/logs/error.log
 
